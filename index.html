@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+        <link rel="stylesheet" href="/styles/styles.css" id="theme-style">
+    </head>
+    <body>
+        <header>
+            <h1>To-Do List</h1>
+            <button id="add-task-btn" onclick="openModal()">Adicionar
+                Tarefa</button>
+            <button id="theme-toggle" onclick="toggleTheme()">Alterar
+                tema</button>
+
+        </header>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Adicionar Nova Tarefa</h2>
+                <input type="text" id="new-task" placeholder="Nova tarefa">
+                <button onclick="addTask()">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box" id="lista-geral">
+                <h2>Lista Geral</h2>
+                <ul id="geral" class="task-list" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+
+                </ul>
+            </div>
+
+            <div class="box" id="em-progresso">
+                <h2>Em Progresso</h2>
+                <ul id="progresso" class="task-list" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+
+                </ul>
+            </div>
+
+            <div class="box" id="em-revisao">
+                <h2>Em Revisão</h2>
+                <ul id="revisao" class="task-list" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+
+                </ul>
+            </div>
+
+            <div class="box" id="concluida">
+                <h2>Concluída</h2>
+                <ul id="concluido" class="task-list" ondrop="drop(event)"
+                    ondragover="allowDrop(event)">
+
+                </ul>
+            </div>
+        </div>
+
+        <script src="/js/script.js"></script>
+    </body>
+</html>
